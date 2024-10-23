@@ -5,6 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { PrismaModule } from './prisma/prisma.module';
 import { ConfigModule } from '@nestjs/config';
 import { ExpenseModule } from './expense/expense.module';
+import { ReportModule } from './report/report.module';
 
 @Module({
   controllers: [AppController],
@@ -13,6 +14,7 @@ import { ExpenseModule } from './expense/expense.module';
     AuthModule,
     PrismaModule,
     ExpenseModule,
+    ReportModule,
   ],
 })
 export class AppModule {}
