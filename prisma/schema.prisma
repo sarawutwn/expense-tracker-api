@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model users {
+  user_id       String    @id() @default(uuid())
+  user_email    String    @unique
+  user_password String
+  refresh_token String?
+  created_at    DateTime  @default(now())
+  updated_at    DateTime? @updatedAt
+  deleted       Boolean   @default(false)
+  Expense       expense[]
+}
+
+model expense {
+  expense_id        String    @id() @default(uuid())
+  expense_title     String
+  expense_amount    Decimal   @db.Decimal(10, 2)
+  expense_timestamp DateTime
+  expense_category  String
+  expense_note      String?
+  created_at        DateTime  @default(now())
+  updated_at        DateTime? @updatedAt
+  deleted           Boolean   @default(false)
+  user_id           String
+  user              users     @relation(references: [user_id], fields: [user_id])
+}
