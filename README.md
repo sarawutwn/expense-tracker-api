@@ -32,6 +32,20 @@
 $ yarn install
 ```
 
+## Migration
+<p align="start">กรณีใช้ใน localhost</p>
+
+```bash
+$ npx prisma migrate dev --name init 
+```
+
+<p align="start">กรณีใชผ่าน postgres endpoint ที่ทำการ migration ไว้แล้ว</p>
+
+```bash
+$ npx prisma db push
+$ npx prisma generate
+```
+
 ## Compile and run the project
 
 ```bash
@@ -43,19 +57,6 @@ $ yarn run start:dev
 
 # production mode
 $ yarn run start:prod
-```
-
-## Run tests
-
-```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
 ```
 
 ## License
