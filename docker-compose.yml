@@ -10,7 +10,5 @@ services:
       - DATABASE_URL=postgresql://expense-tracker-api_owner:t1arqGeBvcR3@ep-super-sun-a1t8j9p3.ap-southeast-1.aws.neon.tech/expense-tracker-api?sslmode=require
       - REFRESH_SECRET_KEY=TUTEDg0AEji8SiWKJGCAlW/d+3x4uAYEsanDBXqlaOMUjpcoIK9ozf2tgedgZIdK9BEEh+yn21bI78aNXjE8kn82YcOd1cJimsgj
       - ACCESS_SECRET_KEY=09vG3XEVN+TbJEwKWZ0Ulu1WARELNtJyjU+ILXUEIgvDEF2nIm09p8ZfceF0ebo/XyeChl4eWujqAc55Hi8zEVe7G7e7ggc0wO2
-    env_file:
-      - .env
     ports:
       - 3000:3000
