@@ -59,6 +59,13 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
+## กรณี run ผ่าน docker
+<p align="start">ให้ทำการ set env ของไฟล์ .env, docker-compose.yml และ Dockerfile ให้ครบ แล้วใช้คำสั่ง</p>
+
+```bash
+$ docker-compose up -d --build
+```
+
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
