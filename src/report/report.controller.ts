@@ -1,7 +1,7 @@
 import { Controller, Get, Query, Req, UseGuards } from '@nestjs/common';
 import { ReportService } from './report.service';
-import { AccessTokenGuard } from 'src/common/guards/access-token.guard';
 import { Request } from 'express';
+import { AccessTokenGuard } from 'src/common/guards/access-token.guard';
 
 @Controller('report')
 export class ReportController {
