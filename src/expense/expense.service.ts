@@ -3,8 +3,8 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
 import { CreateExpenseDto } from './dto/create-expense.dto';
+import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class ExpenseService {

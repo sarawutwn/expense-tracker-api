@@ -24,17 +24,19 @@ export class ReportService {
 
     const results = expenseList.reduce((acc, expense) => {
       const category = expense.expense_category;
-      if (!acc[category]) {
-        acc[category] = {
+      let existingCategory = acc.find((item) => item.category === category);
+      if (!existingCategory) {
+        acc.push({
           category: category,
-          transaction: 0,
-          amount: 0,
-        };
+          transaction: 1,
+          amount: Number(expense.expense_amount),
+        });
+      } else {
+        existingCategory.transaction += 1;
+        existingCategory.amount += Number(expense.expense_amount);
       }
-      acc[category].transaction += 1;
-      acc[category].amount += Number(expense.expense_amount);
       return acc;
-    }, {});
+    }, []);
     return { statusCode: 200, message: 'success', results };
   }
 }
