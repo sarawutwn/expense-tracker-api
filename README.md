@@ -5,8 +5,11 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <a href="http://104.194.152.222:3000"><p align="center">DEMO</p></a>
   <p align="center">Expense Tracker API (Abbon Corporation Co., LTD Interview)</p>
+  
+
+## License
+DEMO on [LINK](http://104.194.152.222:3000).
 
 ## Description
 
