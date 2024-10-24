@@ -24,6 +24,7 @@ export class ExpenseController {
   getExpenseList(
     @Req() req: Request,
     @Query('expense_id') expenseId?: string,
+    @Query('category') category?: string,
     @Query('page') page: number = 1,
     @Query('size') size: number = 10,
     @Query('startDate') startDate?: string,
@@ -32,6 +33,7 @@ export class ExpenseController {
     return this.expenseService.GetExpenses(
       {
         expenseId,
+        category,
         page,
         size,
         startDate,

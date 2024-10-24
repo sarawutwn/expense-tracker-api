@@ -13,6 +13,7 @@ export class ExpenseService {
   async GetExpenses(
     queryParams: {
       expenseId?: string;
+      category?: string;
       page?: number;
       size?: number;
       startDate?: string;
@@ -20,11 +21,14 @@ export class ExpenseService {
     },
     user_id: string,
   ) {
-    const { expenseId, page, size, startDate, endDate } = queryParams;
+    const { expenseId, category, page, size, startDate, endDate } = queryParams;
     let where: any = {};
     where.user_id = user_id;
     if (expenseId) {
       where.expense_id = expenseId;
+    }
+    if (category) {
+      where.expense_category = category;
     }
     if (startDate && endDate) {
       where.expense_timestamp = {
