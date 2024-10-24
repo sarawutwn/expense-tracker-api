@@ -8,8 +8,9 @@
   <p align="center">Expense Tracker API (Abbon Corporation Co., LTD Interview)</p>
   
 
-## DEMO
-เข้าได้ผ่าน [LINK](http://104.194.152.222:3000).
+## DEMO AND DOCMUNENTS
+ทดลองเข้าใช้งานผ่าน [LINK](http://104.194.152.222:3000).
+เอกสารประกอบ [DOCS](https://documenter.getpostman.com/view/30118311/2sAY4rFjz4).
 
 ## Description
 
